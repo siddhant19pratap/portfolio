@@ -1,0 +1,33 @@
+.scroll-indicator {
+  text-align: center;
+  color: #aaa;
+  animation: fadeIn 2s ease-in-out;
+  margin-top: 20px;
+}
+
+.scroll-indicator span {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 0.2rem;
+  color: #ccc;
+}
+
+.arrow {
+  font-size: 1.5rem;
+  animation: bounce 2s infinite;
+  color: #ffffff;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
