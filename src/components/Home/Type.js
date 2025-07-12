@@ -9,8 +9,7 @@ function Type() {
           "Data Engineer",
           "Cloud Enthusiast",
           "AWS Specialist",
-          "MERN Stack Developer",
-          "Lifelong Learner"
+          "Software Developer"
         ],
         autoStart: true,
         loop: true,

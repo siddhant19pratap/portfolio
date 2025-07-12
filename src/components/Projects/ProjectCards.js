@@ -7,7 +7,16 @@ import { BsGithub } from "react-icons/bs";
 function ProjectCards(props) {
   return (
     <Card className="project-card-view">
-      <Card.Img variant="top" src={props.imgPath} alt="card-img" />
+      <Card.Img
+        variant="top"
+        src={props.imgPath}
+        alt="card-img"
+        style={{
+          maxHeight: "250px", // 🔧 limits image height
+          objectFit: "cover", // 🔧 crops to maintain aspect
+          width: "100%",      // ensures full width
+        }}
+      />
       <Card.Body>
         <Card.Title>{props.title}</Card.Title>
         <Card.Text style={{ textAlign: "justify" }}>
@@ -21,7 +30,6 @@ function ProjectCards(props) {
         {"\n"}
 
         {/* If the component contains Demo link and if it's not a Blog then, it will render the below component  */}
-
         {!props.isBlog && props.demoLink && (
           <Button
             variant="primary"
@@ -37,4 +45,5 @@ function ProjectCards(props) {
     </Card>
   );
 }
+
 export default ProjectCards;
